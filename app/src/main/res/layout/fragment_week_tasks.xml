@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f7f5fa">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:id="@+id/weekRangeText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Неделя: 01 - 07 Янв"
+                android:textSize="18sp"
+                android:textColor="#2B2B33"
+                android:textStyle="bold"
+                android:layout_marginBottom="16dp" />
+
+            <!-- Weekly Tasks Section -->
+            <TextView
+                android:id="@+id/weeklyTasksLabel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Задачи на неделю (0)"
+                android:textSize="16sp"
+                android:textColor="#2B2B33"
+                android:textStyle="bold"
+                android:layout_marginBottom="8dp" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/weeklyTasksRecycler"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="24dp"
+                android:background="@drawable/tasks_section_background" />
+
+            <!-- Daily Tasks Section -->
+            <TextView
+                android:id="@+id/dailyTasksLabel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Задачи по дням (0)"
+                android:textSize="16sp"
+                android:textColor="#2B2B33"
+                android:textStyle="bold"
+                android:layout_marginBottom="8dp" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/dailyTasksRecycler"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="24dp"
+                android:background="@drawable/tasks_section_background" />
+
+            <!-- Notes Section -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Заметки"
+                android:textSize="16sp"
+                android:textColor="#2B2B33"
+                android:textStyle="bold"
+                android:layout_marginBottom="8dp" />
+
+            <!-- Note 1 & 2 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:orientation="horizontal">
+
+                <!-- Левая колонка -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        app:boxBackgroundColor="#ffffff"
+                        app:boxStrokeColor="#c7d9e5">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/noteTitle1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="Заголовок заметки 1"
+                            android:textColor="#2B2B33" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="3"
+                        app:boxBackgroundColor="#ffffff"
+                        app:boxStrokeColor="#c7d9e5">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/noteDescription1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="Описание заметки 1"
+                            android:maxLines="3"
+                            android:textColor="#2B2B33" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                </LinearLayout>
+
+                <!-- Правая колонка -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="4dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        app:boxBackgroundColor="#ffffff"
+                        app:boxStrokeColor="#c7d9e5">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/noteTitle2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="Заголовок заметки 2"
+                            android:textColor="#2B2B33" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="3"
+                        app:boxBackgroundColor="#ffffff"
+                        app:boxStrokeColor="#c7d9e5">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/noteDescription2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="Описание заметки 2"
+                            android:maxLines="3"
+                            android:textColor="#2B2B33" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                </LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
